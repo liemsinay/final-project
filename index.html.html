@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+      #wizard {
+        width: 150px; 
+        height: 150px;
+        top: 100px;
+        position: absolute;
+
+    }
+    .container {
+       min-width: 90vh;
+       min-height: 85vh;
+       margin: 10px;
+       background-color: rgb(78, 172, 112);
+       padding: 5vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       
+    }
+
+
+
+
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>נסה להביא לקוף את הבננה</h1>
+      <div class="container">
+     <img  id="wizard" src="images.jpg">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQPtLd5_urIuqxlCBrkcaQwJafChA3uHeRsA&s" >
+     <button onclick="teleport()">Teleport</button>
+     </div>
+     
+</body>
+
+<script>
+      const maxHeight = window.innerHeight - 150;
+      const maxWidth = window.innerWidth - 150;
+    
+       
+      function teleport()  {
+        const wizard = document.getElementById("wizard");
+        const randomTopPosition = Math.floor(Math.random() * maxHeight);
+        const randomLeftPosition = Math.floor(Math.random() * maxWidth);
+
+        wizard.style.top = randomTopPosition + "px";
+        wizard.style.left = randomLeftPosition + "px";
+
+     }
+     
+
+</script>
+</html>
